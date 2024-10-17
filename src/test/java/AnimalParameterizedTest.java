@@ -38,6 +38,6 @@ public class AnimalParameterizedTest {
     @Test(expected = Exception.class)
     public void testGetFoodThrowsExceptionForInvalidAnimalType() throws Exception {
         Animal animal = new Animal();
-        animal.getFood("Некорректный тип"); // должно выбросить исключение
+        animal.getFood("Некорректный тип"); 
     }
 }
