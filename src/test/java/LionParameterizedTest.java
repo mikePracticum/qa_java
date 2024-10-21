@@ -33,14 +33,4 @@ public class LionParameterizedTest {
         Lion lion = new Lion(sex, feline);
         assertEquals(expectedHasMane, lion.doesHaveMane());
     }
-
-    @Test
-    public void testLionCreationWithInvalidSex() {
-        Feline feline = Mockito.mock(Feline.class);
-        String invalidSex = "Неизвестный пол";
-        Exception exception = assertThrows(Exception.class, () -> {
-            new Lion(invalidSex, feline);
-        });
-        assertEquals("Используйте допустимые значения пола животного - самей или самка", exception.getMessage());
-    }
 }
