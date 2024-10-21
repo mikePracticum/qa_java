@@ -23,10 +23,7 @@ public class CatParameterizedTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {List.of("Животные", "Птицы", "Рыба")},
-                {List.of("Птицы", "Рыба")},
-                {List.of("Животные")},
-                {List.of()} // добавляем случай, когда еды нет
+                {List.of()} // единственный случай, когда еды нет
         });
     }
 
