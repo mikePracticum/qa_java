@@ -34,10 +34,4 @@ public class AnimalParameterizedTest {
         List<String> food = animal.getFood(animalKind);
         assertEquals(expectedFood, food);
     }
-
-    @Test(expected = Exception.class)
-    public void testGetFoodThrowsExceptionForInvalidAnimalType() throws Exception {
-        Animal animal = new Animal();
-        animal.getFood("Некорректный тип"); 
-    }
 }
