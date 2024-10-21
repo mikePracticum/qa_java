@@ -11,11 +11,10 @@ public class FelineTest {
     @Test
     public void testEatMeatReturnsPredatorFood() throws Exception {
         Feline feline = new Feline();
-        List<String> food = feline.eatMeat();
-        assertTrue(food.contains("Животные"));
-        assertTrue(food.contains("Птицы"));
-        assertTrue(food.contains("Рыба"));
-    }
+        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        List<String> actualFood = feline.eatMeat();
+        assertEquals(expectedFood, actualFood);
+}
 
     @Test
     public void testGetFamilyReturnsFelineFamily() {
