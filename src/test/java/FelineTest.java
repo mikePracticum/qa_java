@@ -42,9 +42,9 @@ public class FelineTest {
     @Test
     public void testGetFoodWithHerbivoreKind() throws Exception {
         Feline feline = new Feline();
-        List<String> food = feline.getFood("Травоядное");
-        assertTrue(food.contains("Трава"));
-        assertTrue(food.contains("Различные растения"));
+        List<String> expectedFood = List.of("Трава", "Различные растения");
+        List<String> actualFood = feline.getFood("Травоядное");
+        assertEquals(expectedFood, actualFood);
     }
 
     @Test
