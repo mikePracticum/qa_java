@@ -10,9 +10,9 @@ public class AnimalTest {
     @Test
     public void testGetFoodReturnsHerbivoreFood() throws Exception {
         Animal animal = new Animal();
-        List<String> food = animal.getFood("Травоядное");
-        assertTrue(food.contains("Трава"));
-        assertTrue(food.contains("Различные растения"));
+        List<String> expectedFood = List.of("Трава", "Различные растения");
+        List<String> actualFood = animal.getFood("Травоядное");
+        assertEquals(expectedFood, actualFood);
     }
 
     @Test
