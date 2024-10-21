@@ -1,0 +1,8 @@
+CatTest.class
+LionTest.class
+CatParameterizedTest.class
+FelineParameterizedTest.class
+LionParameterizedTest.class
+FelineTest.class
+AnimalParameterizedTest.class
+AnimalTest.class
